@@ -1,0 +1,56 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Opencv JS</title>
+      <script src="js/config.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/window_mgmt.js"></script>
+      <script src="js/timer.js"></script>
+      <script src="js/ball_mgmt.js"></script>
+      <script src="js/timeanalysis.js"></script>
+      <script src="js/run.js"></script>
+      <script async src="js/opencv.js" onload="openCvReady();" type="text/javascript"></script>
+
+      <style>
+        .container {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+        }
+
+        #mySlider {
+          transform:rotate(90deg);
+        }
+
+        #video-container {
+          flex: 1;
+          /* Add any additional styles for the video container */
+        }
+
+        @media (max-width: 768px) {
+          #mySlider {
+            width: 100%; /* Adjust the width to fill the available space */
+            height: auto; /* Reset the height to auto for horizontal mode */
+          }
+        }
+
+
+
+    </style>
+
+   </head>
+   <body>
+      <video id="cam_input" height="480" width="640"></video>
+      <div class="container">
+            <input type="range" id="mySlider" max="200" step="1" style="">
+            <canvas id="canvas_output"></canvas>
+      </div>
+
+      <div id="history"></div>
+      
+      
+   </body>
+</html>
+
+<!--https://github.com/rajeshpachaikani/face-detection-opencv-js/blob/master/js/utils.js-->
